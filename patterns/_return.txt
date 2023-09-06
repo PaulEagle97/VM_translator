@@ -1,0 +1,5 @@
+// var_1 = register that holds return address
+
+@{var_1}
+A=M
+0;JMP

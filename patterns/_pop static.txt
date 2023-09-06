@@ -1,0 +1,12 @@
+// var_1 = file name
+// var_2 = i
+
+// SP --
+@R0
+M=M-1
+
+// <file_name>.<i> = *SP
+A=M
+D=M
+@{var_1}.{var_2}
+M=D

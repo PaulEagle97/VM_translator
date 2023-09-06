@@ -1,0 +1,2 @@
+// function <func_name> <i>
+// executed on a higher level by repeating the "push constant 0" <i> number of times.

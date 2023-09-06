@@ -1,0 +1,4 @@
+// var_1 = label name
+
+@{var_1}
+0;JMP

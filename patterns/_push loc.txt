@@ -1,0 +1,19 @@
+// var_1 = {local:1, argument:2, this:3, that:4}
+// var_2 = i
+// var_3 = {'+', '-'}
+
+// D = *R{var_1} + {var_2}
+@R{var_1}
+D=M
+@{var_2}
+A=D{var_3}A
+D=M
+
+// *SP = D
+@R0
+A=M
+M=D
+
+// SP ++
+@R0
+M=M+1

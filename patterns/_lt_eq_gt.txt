@@ -1,0 +1,38 @@
+// var_1 = {'GT', 'EQ', 'LT'}
+// var_2 = {'JLT', 'JEQ', 'JGT'}
+// var_3 = int(0, 1, 2 ...)
+
+// D = *(SP - 1)
+@R0
+M=M-1
+A=M
+D=M
+
+// D = *(SP - 1) - *(SP - 2)
+@R0
+M=M-1
+A=M
+D=D-M
+
+// if D {'<', '==', '>'} 0 goto (IS_<var_1>_<var_3>)
+@IS_{var_1}_{var_3}
+D;{var_2}
+
+// else *(SP - 2) = 0 and
+// goto (END_<var_1>_<var_3>)
+@R0
+A=M
+M=0
+@END_{var_1}_{var_3}
+0;JMP
+
+// *(SP - 2) = -1
+(IS_{var_1}_{var_3})
+@R0
+A=M
+M=-1
+
+// SP ++
+(END_{var_1}_{var_3})
+@R0
+M=M+1
